@@ -50,3 +50,85 @@ h1,h2,h3,p{overflow-wrap:break-word}.hero h1{font:900 clamp(78px,10.5vw,175px)/.
 @media (max-width:360px){.oneplanet-brand img{width:86px}.university-brand img{width:78px}.masthead-inner{gap:6px}.hero h1{font-size:60px}.event-sticker{right:-9px}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition-duration:0s!important;animation-duration:0s!important}}
 @media print{.masthead,.hero-actions,.marquee,.venture-links,.contact-buttons,.site-footer,.toast{display:none!important}.site-container{width:100%}.section{padding:22px 0}.hero-content{display:block}.hero-visual{height:260px;min-height:260px}.portrait-ring{height:230px;width:230px}.event-sticker{display:none}.hero h1{font-size:68px}.venture-grid{display:grid;grid-template-columns:repeat(2,1fr)}.venture-card{break-inside:avoid}.venture-text>p{min-height:0}.conversation-section,.vice-section{background:#fff;color:#111}.vice-left h2 span,.vice-caption{color:#111}.contact-section{background:#fff}.contact-card{box-shadow:none}}
+
+/* =====================================
+   SLUSH 2026 — INFINITE MOVING MARQUEE
+   ===================================== */
+
+.marquee {
+  overflow: hidden;
+  background: var(--ink);
+  color: #ffffff;
+}
+
+.marquee-inner {
+  display: block;
+  width: 100%;
+  max-width: none;
+  overflow: hidden;
+  padding: 19px 0;
+  font-size: clamp(19px, 2.1vw, 29px);
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 0;
+  align-items: center;
+  animation: slush-scroll 24s linear infinite;
+  will-change: transform;
+}
+
+.marquee-group {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  gap: clamp(20px, 3vw, 48px);
+  padding-right: clamp(20px, 3vw, 48px);
+  white-space: nowrap;
+}
+
+.marquee-star {
+  color: var(--neon);
+  font-size: 1.2em;
+  line-height: 1;
+}
+
+/* Continuous movement from right to left */
+@keyframes slush-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause when hovering */
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* Slightly faster on mobile */
+@media (max-width: 600px) {
+  .marquee-track {
+    animation-duration: 18s;
+  }
+
+  .marquee-inner {
+    padding: 15px 0;
+  }
+}
+
+/* Accessibility: respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-inner {
+    overflow-x: auto;
+  }
+
+  .marquee-track {
+    animation: none;
+    will-change: auto;
+  }
+}
