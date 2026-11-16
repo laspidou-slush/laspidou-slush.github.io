@@ -105,10 +105,14 @@ h1,h2,h3,p{overflow-wrap:break-word}.hero h1{font:900 clamp(78px,10.5vw,175px)/.
   }
 }
 
-/* Pause when hovering */
-.marquee:hover .marquee-track {
-  animation-play-state: paused;
+
+/* Pause only on devices with a real mouse */
+@media (hover: hover) and (pointer: fine) {
+  .marquee:hover .marquee-track {
+    animation-play-state: paused;
+  }
 }
+
 
 /* Slightly faster on mobile */
 @media (max-width: 600px) {
