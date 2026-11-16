@@ -601,13 +601,13 @@ h1,h2,h3,p {
 h2 {
   font: 900 clamp(50px,6.1vw,98px)/.93 var(--heading);
   letter-spacing: -.012em;
-  margin: 0;
+  margin-bottom: 5px;
 }
 
 h3 {
   font: 900 34px/1.04 var(--heading);
   letter-spacing: .012em;
-  margin-bottom: 5px;
+  margin: 0px;
 }
 
 .intro-grid {
