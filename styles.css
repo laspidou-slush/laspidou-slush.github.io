@@ -75,7 +75,7 @@ h1,h2,h3,p{overflow-wrap:break-word}.hero h1{font:900 clamp(78px,10.5vw,175px)/.
   width: max-content;
   gap: 0;
   align-items: center;
-  animation: slush-scroll 24s linear infinite;
+  animation: slush-scroll 20s linear infinite;
   will-change: transform;
 }
 
