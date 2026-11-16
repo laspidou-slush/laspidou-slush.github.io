@@ -1792,7 +1792,7 @@ h3 {
   /* Visit section heading spacing */
   .visit-heading-line {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 100px;
   }
   
   .visit-heading-highlight {
