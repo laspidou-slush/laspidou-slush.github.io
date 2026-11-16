@@ -607,7 +607,7 @@ h2 {
 h3 {
   font: 900 34px/1.04 var(--heading);
   letter-spacing: .012em;
-  margin: 0;
+  margin-bottom: 5px;
 }
 
 .intro-grid {
@@ -660,15 +660,6 @@ h3 {
   width: 52px;
   background: var(--pink);
   flex: 0 0 52px;
-}
-/* Visit section heading spacing */
-.visit-heading-line {
-  display: block;
-  margin-bottom: 5px !importnant;
-}
-
-.visit-heading-highlight {
-  display: inline-block;
 }
 
 /* Spin-offs */
