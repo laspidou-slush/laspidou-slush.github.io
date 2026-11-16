@@ -1789,4 +1789,13 @@ h3 {
   .contact-card {
     box-shadow: none;
   }
+    /* Visit section heading spacing */
+  .visit-heading-line {
+    display: block;
+    margin-bottom: 14px;
+  }
+  
+  .visit-heading-highlight {
+    display: inline-block;
+  }
 }
