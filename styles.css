@@ -125,14 +125,16 @@ h1,h2,h3,p{overflow-wrap:break-word}.hero h1{font:900 clamp(78px,10.5vw,175px)/.
   }
 }
 
-/* Accessibility: respect reduced motion */
+/* Reduced motion: static text, no manual scrolling */
 @media (prefers-reduced-motion: reduce) {
   .marquee-inner {
-    overflow-x: auto;
+    overflow: hidden;
   }
 
   .marquee-track {
     animation: none;
+    transform: none;
     will-change: auto;
   }
 }
+
