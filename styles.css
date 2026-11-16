@@ -661,6 +661,15 @@ h3 {
   background: var(--pink);
   flex: 0 0 52px;
 }
+/* Visit section heading spacing */
+.visit-heading-line {
+  display: block;
+  margin-bottom: 14px;
+}
+
+.visit-heading-highlight {
+  display: inline-block;
+}
 
 /* Spin-offs */
 
